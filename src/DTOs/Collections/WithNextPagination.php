@@ -10,7 +10,7 @@ trait WithNextPagination
 
     public function setNextPagination(?Pagination $pagination): static
     {
-        $this->nextPagination = $pagination;
+        $this->nextPagination = $pagination; // @phpstan-ignore-line
 
         return $this;
     }

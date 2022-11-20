@@ -24,8 +24,8 @@ class Paddle extends SaloonConnector
     public function defineBaseUrl(): string
     {
         return $this->sandbox
-            ? "https://sandbox-vendors.paddle.com/api/"
-            : "https://vendors.paddle.com/api/";
+            ? 'https://sandbox-vendors.paddle.com/api/'
+            : 'https://vendors.paddle.com/api/';
     }
 
     public function defaultAuth(): ?AuthenticatorInterface

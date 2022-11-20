@@ -10,7 +10,7 @@ trait WithPaginationTotals
 
     public function setPaginationTotals(PaginationTotals $totals): static
     {
-        $this->paginationTotals = $totals;
+        $this->paginationTotals = $totals; // @phpstan-ignore-line
 
         return $this;
     }

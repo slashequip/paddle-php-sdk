@@ -15,8 +15,7 @@ class PaddleAuthenticator implements AuthenticatorInterface
 
     public function set(SaloonRequest $request): void
     {
-        $request->addData("vendor_id", $this->vendorId);
-        $request->addData("vendor_auth_code", $this->vendorAuthCode);
+        $request->addData('vendor_id', $this->vendorId);
+        $request->addData('vendor_auth_code', $this->vendorAuthCode);
     }
-
 }

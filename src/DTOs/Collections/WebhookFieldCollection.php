@@ -12,8 +12,7 @@ use SlashEquip\PaddlePhpSdk\DTOs\WebhookField;
 class WebhookFieldCollection extends Collection
 {
     /**
-     * @param array<array-key, array> $data
-     *
+     * @param  array<array-key, string|int>  $data
      * @return self<array-key, WebhookField>
      */
     public static function fromArray(array $data): self

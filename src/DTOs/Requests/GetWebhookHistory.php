@@ -8,8 +8,6 @@ class GetWebhookHistory
 {
     public function __construct(
         public readonly ?CursorPagination $pagination = null,
-    )
-    {
+    ) {
     }
 }
-

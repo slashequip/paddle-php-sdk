@@ -17,11 +17,12 @@ class WebhookHistory
         public readonly CarbonInterface $updatedAt,
         public readonly int $attempts,
         public readonly WebhookFieldCollection $fields,
-    ) {}
+    ) {
+    }
 
-    public static function fromArray(array $data): static
+    public static function fromArray(array $data): WebhookHistory
     {
-        return new static(
+        return new WebhookHistory(
             id: data_get($data, 'id'),
             alertId: data_get($data, 'alert_id'),
             alertName: data_get($data, 'alert_name'),
