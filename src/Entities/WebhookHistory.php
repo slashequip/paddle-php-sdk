@@ -1,10 +1,10 @@
 <?php
 
-namespace SlashEquip\PaddlePhpSdk\DTOs;
+namespace SlashEquip\PaddlePhpSdk\Entities;
 
 use Carbon\Carbon;
 use Carbon\CarbonInterface;
-use SlashEquip\PaddlePhpSdk\DTOs\Collections\WebhookFieldCollection;
+use SlashEquip\PaddlePhpSdk\Entities\Collections\WebhookFieldCollection;
 
 class WebhookHistory
 {

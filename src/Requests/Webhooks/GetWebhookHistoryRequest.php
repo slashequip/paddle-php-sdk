@@ -8,11 +8,12 @@ use Sammyjo20\Saloon\Http\SaloonRequest;
 use Sammyjo20\Saloon\Http\SaloonResponse;
 use Sammyjo20\Saloon\Traits\Plugins\CastsToDto;
 use Sammyjo20\Saloon\Traits\Plugins\HasJsonBody;
-use SlashEquip\PaddlePhpSdk\DTOs\Collections\WebhookHistoryCollection;
-use SlashEquip\PaddlePhpSdk\DTOs\Pagination\CursorPagination;
-use SlashEquip\PaddlePhpSdk\DTOs\Pagination\PaginationTotals;
-use SlashEquip\PaddlePhpSdk\DTOs\Requests\GetWebhookHistory;
+use SlashEquip\PaddlePhpSdk\Entities\Collections\WebhookHistoryCollection;
+use SlashEquip\PaddlePhpSdk\Entities\Pagination\CursorPagination;
+use SlashEquip\PaddlePhpSdk\Entities\Pagination\PaginationTotals;
+use SlashEquip\PaddlePhpSdk\DTOs\Webhooks\GetWebhookHistory;
 use SlashEquip\PaddlePhpSdk\Paddle;
+use SlashEquip\PaddlePhpSdk\PaddlePhpSdkHelper;
 
 class GetWebhookHistoryRequest extends SaloonRequest
 {
@@ -35,12 +36,12 @@ class GetWebhookHistoryRequest extends SaloonRequest
 
     public function defaultData(): array
     {
-        return [
+        return PaddlePhpSdkHelper::excludeNullValues([
             'page' => $this->data->pagination?->page,
             'alerts_per_page' => $this->data->pagination?->perPage,
             'query_head' => $this->data->pagination?->queryHead->toDateTimeString(),
             'query_tail' => $this->data->pagination?->queryHead->toDateTimeString(),
-        ];
+        ]);
     }
 
     protected function castToDto(SaloonResponse $response): WebhookHistoryCollection

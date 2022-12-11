@@ -1,13 +1,13 @@
 <?php
 
-namespace SlashEquip\PaddlePhpSdk\DTOs\Collections;
+namespace SlashEquip\PaddlePhpSdk\Entities\Collections;
 
 use Illuminate\Support\Collection;
-use SlashEquip\PaddlePhpSdk\DTOs\WebhookHistory;
+use SlashEquip\PaddlePhpSdk\Entities\WebhookHistory;
 
 /**
  * @template TKey of array-key
- * @template TValue of \SlashEquip\PaddlePhpSdk\DTOs\WebhookHistory
+ * @template TValue of \SlashEquip\PaddlePhpSdk\Entities\WebhookHistory
  */
 class WebhookHistoryCollection extends Collection
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace SlashEquip\PaddlePhpSdk\DTOs\Collections;
+namespace SlashEquip\PaddlePhpSdk\Entities\Collections;
 
-use SlashEquip\PaddlePhpSdk\DTOs\Pagination\Pagination;
+use SlashEquip\PaddlePhpSdk\Entities\Pagination\Pagination;
 
 trait WithNextPagination
 {

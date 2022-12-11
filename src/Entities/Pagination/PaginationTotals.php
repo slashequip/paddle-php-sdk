@@ -1,6 +1,6 @@
 <?php
 
-namespace SlashEquip\PaddlePhpSdk\DTOs\Pagination;
+namespace SlashEquip\PaddlePhpSdk\Entities\Pagination;
 
 class PaginationTotals
 {

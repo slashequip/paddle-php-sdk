@@ -6,21 +6,21 @@ use GuzzleHttp\Exception\GuzzleException;
 use ReflectionException;
 use Sammyjo20\Saloon\Exceptions\SaloonException;
 use Sammyjo20\Saloon\Http\RequestCollection;
-use SlashEquip\ChargebeeSdk\Requests\Plans\GetWebhookHistoryRequest;
-use SlashEquip\PaddlePhpSdk\Entities\Collections\WebhookHistoryCollection;
-use SlashEquip\PaddlePhpSdk\DTOs\Webhooks\GetWebhookHistory;
+use SlashEquip\ChargebeeSdk\Requests\Plans\ListPlansRequest;
+use SlashEquip\PaddlePhpSdk\DTOs\Plans\ListPlans;
+use SlashEquip\PaddlePhpSdk\Entities\Collections\PlanCollection;
 
-class WebhooksRequestCollection extends RequestCollection
+class SubscriptionsRequestCollection extends RequestCollection
 {
     /**
      * @throws ReflectionException
      * @throws GuzzleException
      * @throws SaloonException
      */
-    public function getHistory(GetWebhookHistory $dto): WebhookHistoryCollection
+    public function listPlans(ListPlans $dto): PlanCollection
     {
         return $this->connector
-            ->request(new GetWebhookHistoryRequest($dto))
+            ->request(new ListPlansRequest($dto))
             ->send()
             ->dto();
     }

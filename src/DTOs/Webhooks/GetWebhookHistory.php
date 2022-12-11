@@ -1,8 +1,8 @@
 <?php
 
-namespace SlashEquip\PaddlePhpSdk\DTOs\Requests;
+namespace SlashEquip\PaddlePhpSdk\DTOs\Webhooks;
 
-use SlashEquip\PaddlePhpSdk\DTOs\Pagination\CursorPagination;
+use SlashEquip\PaddlePhpSdk\Entities\Pagination\CursorPagination;
 
 class GetWebhookHistory
 {

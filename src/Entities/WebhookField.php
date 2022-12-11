@@ -1,6 +1,6 @@
 <?php
 
-namespace SlashEquip\PaddlePhpSdk\DTOs;
+namespace SlashEquip\PaddlePhpSdk\Entities;
 
 class WebhookField
 {

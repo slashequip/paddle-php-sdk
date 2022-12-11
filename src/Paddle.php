@@ -33,6 +33,11 @@ class Paddle extends SaloonConnector
         return new PaddleAuthenticator($this->vendorId, $this->vendorAuthCode);
     }
 
+    public function subscriptions(): SubscriptionsRequestCollection
+    {
+        return new SubscriptionsRequestCollection($this);
+    }
+
     public function webhooks(): WebhooksRequestCollection
     {
         return new WebhooksRequestCollection($this);
